@@ -1,0 +1,41 @@
+from turtle import *
+def house(x,y,c):
+    color(c)
+    w=20
+    h=30
+    begin_fill()
+    forward(w*x)
+    left(90)
+    forward(h*y)
+    left(90)
+    forward(w*x)
+    left(90)
+    forward(h*y)
+    left(90)
+    end_fill()
+
+    penup()
+    forward(w/3)
+    left(90)
+    forward(h/3)
+    right(90)
+    
+    color('blue')
+    for i in range(y):
+        for y in range(x):
+            pendown()
+            begin_fill()
+            for j in range(4):
+                forward(w/3)
+                left(90)
+            end_fill()
+            penup()
+            forward(w)
+        
+        left(180)
+        forward(w*x)
+        right(90)
+        forward(h)
+        right(90)
+
+
